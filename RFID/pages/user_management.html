@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFID Management System - User Management</title>
+    <link rel="stylesheet" href="../Styles/user.css"> <!-- You can link an external CSS file for styling -->
+</head>
+<body>
+    <header>
+        <h1>RFID Management System - User Management</h1>
+    </header>
+    <nav class="nav">
+        <ul class="ul">
+            
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="user_management.html">User Management</a></li>
+            <li><a href="tag_managemnet.html">Tag Management</a></li>
+            <li><a href="event_logs.html">Event Logs</a></li>
+            <li><a href="location_management.html">Location Management</a></li>
+            <li><a href="time_schedule.html">Time Schedule</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="user-management">
+            <h2>User Management</h2>
+            <button onclick="showAddUserForm()">Add User</button> 
+            <div id="addUserForm" style="display: none;">
+                <h3>Add New User</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="userId">User ID:</label>
+                        <input type="text" id="userId" name="userId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role:</label>
+                        <input type="text" id="role" name="role" required>
+                    </div>
+                    <button class="buttons" type="submit">Add</button>
+                </form>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Role</th>
+                        
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                    <tr>
+                        <td>User1</td>
+                        <td>JohnDoe</td>
+                        <td>********</td>
+                        <td>Admin</td>
+                        
+                        <td>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 RFID Management System</p>
+    </footer>
+    <script>
+        function showAddUserForm() {
+            var addUserForm = document.getElementById("addUserForm");
+            addUserForm.style.display = "block";
+        }
+    </script>
+</body>
+</html>

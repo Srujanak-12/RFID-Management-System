@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFID Management System - Time Schedule</title>
+    <link rel="stylesheet" href="../Styles/time.css"> 
+</head>
+<body>
+    <header>
+        <h1>RFID Management System - Time Schedule</h1>
+    </header>
+    <nav class="nav">
+        <ul class="ul">
+            
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="user_management.html">User Management</a></li>
+            <li><a href="tag_managemnet.html">Tag Management</a></li>
+            <li><a href="event_logs.html">Event Logs</a></li>
+            <li><a href="location_management.html">Location Management</a></li>
+            <li><a href="time_schedule.html">Time Schedule</a></li>
+            <li><a href="logout.html">Logout</a></li> 
+        </ul>
+    </nav>
+    <main>
+        <section id="time-schedule">
+            <h2>Time Schedule</h2>
+            <button onclick="showAddScheduleForm()">Add Schedule</button> 
+            <div id="addScheduleForm" style="display: none;">
+                <h3>Add New Schedule</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="schId">Schedule ID:</label>
+                        <input type="text" id="schId" name="schId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="startTime">Start Time:</label>
+                        <input type="time" id="startTime" name="startTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endTime">End Time:</label>
+                        <input type="time" id="endTime" name="endTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tagId">Tag ID:</label>
+                        <input type="text" id="tagId" name="tagId" required>
+                    </div>
+                    <button class="buttons" type="submit">Add</button>
+                </form>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Schedule ID</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Tag ID</th>
+                       
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>1</td>
+                        <td>08:00</td>
+                        <td>16:00</td>
+                        <td>RFID123456</td>
+                       
+                        <td>
+                            
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 RFID Management System</p>
+    </footer>
+    <script>
+        function showAddScheduleForm() {
+            var addScheduleForm = document.getElementById("addScheduleForm");
+            addScheduleForm.style.display = "block";
+        }
+    </script>
+</body>
+</html>

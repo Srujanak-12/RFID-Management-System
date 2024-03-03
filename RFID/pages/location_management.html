@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFID Management System - Location Management</title>
+    <link rel="stylesheet" href="../Styles/loc.css"> 
+</head>
+<body>
+    <header>
+        <h1>RFID Management System - Location Management</h1>
+    </header>
+    <nav class="nav">
+        <ul class="ul">
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="user_management.html">User Management</a></li>
+            <li><a href="tag_managemnet.html">Tag Management</a></li>
+            <li><a href="event_logs.html">Event Logs</a></li>
+            <li><a href="location_management.html">Location Management</a></li>
+            <li><a href="time_schedule.html">Time Schedule</a></li>
+            <li><a href="logout.html">Logout</a></li> 
+        </ul>
+    </nav>
+    <main>
+        <section id="location-management">
+            <h2>Location Management</h2>
+            <button onclick="showAddLocationForm()">Add Location</button>
+            <div id="addLocationForm" style="display: none;"> 
+                <h3>Add New Location</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="locId">Location ID:</label>
+                        <input type="text" id="locId" name="locId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="locName">Location Name:</label>
+                        <input type="text" id="locName" name="locName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userId">User ID:</label>
+                        <input type="text" id="userId" name="userId" required>
+                    </div>
+                    <button class="buttons" type="submit">Add</button>
+                </form>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Location ID</th>
+                        <th>Location Name</th>
+                        <th>User ID</th>
+                       
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>1</td>
+                        <td>Room 101</td>
+                        <td>User1</td>
+                        
+                        <td>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 RFID Management System</p>
+    </footer>
+    <script>
+        function showAddLocationForm() {
+            var addLocationForm = document.getElementById("addLocationForm");
+            addLocationForm.style.display = "block";
+        }
+    </script>
+</body>
+</html>

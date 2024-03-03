@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFID Management System - Login</title>
+    <link rel="stylesheet" href="../Styles/login.css"> 
+</head>
+<body>
+    <header>
+        <h1>RFID Management System</h1>
+    </header>
+    <main>
+        <section id="login">
+            <h2>Login</h2>
+            <form action="login.php" method="POST">
+                <div class="form-group">
+                    <label for="userId">User ID:</label>
+                    <input type="text" id="userId" name="userId" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Role:</label>
+                    <input type="text" id="role" name="role" required>
+                </div>
+                <input type="hidden" name="redirect" value="index.html"> 
+                <button type="submit">Login</button>
+            </form>
+            
+        </section>
+    </main>
+    <footer >
+        <p>&copy; 2024 RFID Management System</p>
+    </footer>
+</body>
+</html>

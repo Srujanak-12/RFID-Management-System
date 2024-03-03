@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <link rel="stylesheet" href="../Styles/logout.css"> 
+</head>
+<body>
+    <header>
+        <h1>Logout</h1>
+    </header>
+    <main>
+        <section>
+            <p>Logging out...</p>
+           
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 RFID Management System</p>
+    </footer>
+    <script>
+       
+        sessionStorage.clear(); 
+        setTimeout(function() {
+            window.location.href = "login.html"; 
+        }, 2000); 
+    </script>
+</body>
+</html>
